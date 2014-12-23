@@ -1,0 +1,36 @@
+<template name="sendEmail">
+  <form class="main form" onsubmit="return false;">
+  <p>Complete below form and click submit to send reminder email regarding incomplete post-closing items.</p>
+  <p> Note: Use a comma to seperate email addresses (e.g., bob.smith@firm.com, tim.roberts@company.com)</p>
+    <!--input recipient emails.-->
+    <div class="form-group">
+      <label class="control-label" for="title">To:</label>
+      <div class="controls">
+          <input name="toperson" id="toperson" type="text" value="{{closing_agent_email}}" placeholder="Recipient's email" class="form-control"/>
+      </div>
+    </div>
+    <!--Responsible attorney cc.-->
+    <div class="form-group">
+      <label class="control-label" for="title">cc:</label>
+      <div class="controls">
+        <input name="ccperson" id="ccperson" type="text" value="{{responsible_attorney_email}}, {{responsible_partner_email}}, {{bank_closer_email}}" placeholder="Responsible attorney email address" class="form-control"/>
+      </div>
+    </div>
+    <!--Email Subject input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Subject Line</label>
+      <div class="controls">
+        <input name="subject" id="subject" type="text" value="{{title}}" placeholder="Subject Line" class="form-control"/>
+      </div>
+    </div>
+     <!--Body of Email input.-->
+    <div class="form-group-lg">
+      <label class="control-label" for="title">Body of Email</label>
+      <div class="controls">
+        <input name="bodyemail" id="bodyemail" type="text" size="100" width="300" value="{{lateitems}}" placeholder="Body of Email" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+  <a href="{{pathFor 'dealPage'}}">Return to Deal Page</a>
+</template>

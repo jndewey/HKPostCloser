@@ -1,0 +1,18 @@
+<template name="dealPage">
+  {{> dealItem}}
+  <h4>
+  {{#each tasks}}
+  {{>showTasks}}
+  {{/each}}
+  </h4>
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="task_text">Add Task</label>
+      <div class="controls">
+          <input name="task_text" id="task_text" type="text" value="{{task_text}}" placeholder="Enter Task" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+  </form>
+   <a href="{{pathFor 'features'}}">Return to Deal List</a>
+</template>

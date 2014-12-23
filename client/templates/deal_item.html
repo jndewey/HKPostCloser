@@ -1,0 +1,18 @@
+<template name="dealItem">
+	<div class="post">
+    	<div class="post-content">
+			<ul class="list-group">
+      			<li class="list-group-item"><h2>{{title}}</h2><h3>{{client_number}}.{{matter_number}} / Date Created: {{createdAt}} / Due Date: {{duedate}}</h3><p>Responsible attorney:{{responsible_attorney_email}}</p><p>Responsible partner: {{responsible_partner_email}}</p><p>Closing agent: {{closing_agent_email}}</p><p>Bank closer: {{bank_closer_email}}</p>
+      	  		<a href="{{pathFor 'dealPage'}}" class="discuss btn btn-default">Open Deal</a>
+      	  		<a href="{{pathFor 'dealEdit'}}" class="discuss btn btn-default">Edit Deal Information</a>
+      	  		<a href="{{pathFor 'sendEmail'}}" class="discuss btn btn-default">Send Reminder Email</a></li>
+     		</ul>
+     		<ul class="list-group">
+      			<li class="{{#if checked}}checked{{/if}}">
+    			Archive <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    			</li>
+    		</ul>
+   	 	</div>
+   </div>
+</template>
+

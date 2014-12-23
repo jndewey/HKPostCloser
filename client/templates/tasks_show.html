@@ -1,0 +1,13 @@
+<template name="showTasks">
+	<div class="post">
+    	<div class="post-content">
+			<ul class="list-group">
+      			<li class="{{#if checked}}checked{{/if}}">
+    			<button class="delete">&times;Delete<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+    			<input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    			<span class="text">{{title}}</span>
+    			</li>
+    		</ul>
+   	 	</div>
+   </div>
+</template>

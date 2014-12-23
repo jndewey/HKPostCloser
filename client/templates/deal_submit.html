@@ -1,0 +1,56 @@
+<template name="dealSubmit">
+  <form class="main form">
+    <!--Client Number input.-->
+    <div class="form-group">
+      <label class="control-label" for="client_number">Client Number</label>
+      <div class="controls">
+          <input name="client_number" id="client_number" type="text" value="" placeholder="Client Number" class="form-control"/>
+      </div>
+    </div>
+    <!--Matter number input.-->
+    <div class="form-group">
+      <label class="control-label" for="matter_number">Matter Number</label>
+      <div class="controls">
+          <input name="matter_number" id="matter_number" type="text" value="" placeholder="Matter Number" class="form-control"/>
+      </div>
+    </div>
+    <!--Deal name input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="Name your deal" class="form-control"/>
+      </div>
+    </div>
+    <!--Responsible attorney input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Responsible attorney email address</label>
+      <div class="controls">
+        <input name="responsible_attorney_email" id="responsible_attorney_email" type="text" value="" placeholder="Responsible attorney email address" class="form-control"/>
+      </div>
+    </div>
+    <!--Responsible partner input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Responsible partner email address</label>
+      <div class="controls">
+        <input name="responsible_partner_email" id="responsible_partner_email" type="text" value="" placeholder="Responsible partner email address" class="form-control"/>
+      </div>
+    </div>
+     <!--Closing agent input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Closing agent email address</label>
+      <div class="controls">
+        <input name="closing_agent_email" id="closing_agent_email" type="text" value="" placeholder="Closing agent email address" class="form-control"/>
+      </div>
+    </div>
+    <!--Bank closer input.-->
+    <div class="form-group">
+      <label class="control-label" for="title">Bank closer email address</label>
+      <div class="controls">
+        <input name="bank_closer_email" id="bank_closer_email" type="text" value="" placeholder="Bank closer email address" class="form-control"/>
+      </div>
+    </div>
+    Due Date:
+    <input type="date" name="due_date">
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>
