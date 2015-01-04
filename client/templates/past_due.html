@@ -1,0 +1,14 @@
+<template name="pastdue">
+{{#if currentUser}}
+
+ 
+    {{#each pastdueitems}}
+      <ul class="list-group">
+      <li><a href="{{pathFor 'dealPage' _id=this.deal_id }}">{{title}}</a></li>
+      </ul>
+      {{/each}}
+
+   {{else}}
+   <h1>You must be signed in to access deals</h1>
+   {{/if}}
+</template>

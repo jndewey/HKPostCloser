@@ -1,7 +1,11 @@
 <template name = "dealsList">
+{{#if currentUser}}
     <div class="inner cover">
 			{{#each deals}}
 			{{>dealItem}}
 			{{/each}}
 	</div>
+{{else}}
+<h1>You must be signed in to access deals</h1>
+   {{/if}}
 </template>

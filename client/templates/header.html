@@ -1,13 +1,14 @@
 <template name="header">
 <div class="front_story">
-<h3 align="left">HKPostCloser</h3></div>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="/">Home</a></li>
-                  <li><a href="{{pathFor 'features'}}">Open Deals</a></li>
-                  <li><a href="{{pathFor 'dealSubmit'}}">Add Deal</a></li>
-                  <li><a href="{{pathFor 'archived'}}">Archived Deals</a></li>
-                  <li><a href="{{pathFor 'contacts'}}">Contact</a></li>
-                  <li> {{> loginButtons align="right"}}</li>
-                </ul>
-
+	<h3 align="left">HKPostCloser</h3>
+</div>
+<ul class="nav masthead-nav">
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="{{pathFor 'features'}}">Open Deals</a></li>
+    <li><a href="{{pathFor 'dealSubmit'}}">Add Deal</a></li>
+    <li><a href="{{pathFor 'archived'}}">Archived Deals</a></li>
+    <li><a href="{{pathFor 'pastdue'}}">Past Due Page</a></li>
+    <li><a href="{{pathFor 'contacts'}}">Contact</a></li>
+    <li> {{> loginButtons align="right"}}</li>
+</ul>
 </template>

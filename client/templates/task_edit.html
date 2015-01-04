@@ -1,0 +1,14 @@
+
+<template name = "taskeditPage">
+<form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="task_text">Task</label>
+      <div class="controls">
+          <input name="task_text" id="task_text" type="text" value="{{title}}" placeholder="Enter Task" class="form-control"/>
+          <p>Notes</p><input name="task_notes" id="task_notes" type="text" value="{{task_notes}}" placeholder="Notes" class="form-control"/>
+         <p>Due Date</p> <input name="task_due_date" id="task_due_date" type="date" value="{{task_due_date}}"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+  </form>
+</template>

@@ -13,7 +13,7 @@
     <div class="form-group">
       <label class="control-label" for="title">cc:</label>
       <div class="controls">
-        <input name="ccperson" id="ccperson" type="text" value="{{responsible_attorney_email}}, {{responsible_partner_email}}, {{bank_closer_email}}" placeholder="Responsible attorney email address" class="form-control"/>
+        <input name="ccperson" id="ccperson" type="text" value="{{responsible_attorney_email}}, {{responsible_partner_email}}, {{additional_attorney_email}}, {{legal_assistant_email}}, {{bank_closer_email}}" placeholder="Responsible attorney email address" class="form-control"/>
       </div>
     </div>
     <!--Email Subject input.-->
@@ -27,7 +27,7 @@
     <div class="form-group-lg">
       <label class="control-label" for="title">Body of Email</label>
       <div class="controls">
-        <input name="bodyemail" id="bodyemail" type="text" size="100" width="300" value="{{lateitems}}" placeholder="Body of Email" class="form-control"/>
+        <input name="bodyemail" id="bodyemail" type="text" size="100" width="600" value="Our records reflect that each of the following items are still outstanding: {{#each lateitems}} {{title}}, {{/each}} If one or more of these items has previously been set to us, please reply to all and confirm same.  Otherwise, please provide these items as soon as possible." placeholder="Body of Email" class="form-control"/>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>

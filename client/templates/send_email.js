@@ -1,9 +1,11 @@
 Template.sendEmail.helpers({
 lateitems: function() {
-    var openitems = Tasks.find({deal_id: this._id});
-    var message = "The following items are late:";
-    var finalmessage = message + " " + openitems.length;
-    return finalmessage;
+   return Tasks.find({deal_id: this._id, checked: !true});
+   // openitemstitle = Object.getOwnPropertyDescriptor(openitems, '_selectorID');
+    //return openitemstitle;
+    //message = "The following items are late:";
+    //finalmessage = message + " " + openitemstitle;
+    //return finalmessage;
   }
 });
 
@@ -15,6 +17,7 @@ Template.sendEmail.events({
     var bodyemail = event.target.bodyemail.value;
 
    Meteor.call('sendEmail', toperson, ccperson, "hkpostcloser@gmail.com", subject, bodyemail);
-    return alert("Email Sent");
+    Router.go('dealPage', {_id: this._id});
+      return alert("Email Sent");
  }
     });
