@@ -16,7 +16,12 @@ Template.sendEmail.events({
     var subject = event.target.subject.value;
     var bodyemail = event.target.bodyemail.value;
 
+    var currentDealId = this._id;
+    var new_date = new Date();
+
    Meteor.call('sendEmail', toperson, ccperson, "hkpostcloser@gmail.com", subject, bodyemail);
+   Deals.update(currentDealId, {$inc: {follow_up_count: 1}});
+   Deals.update(currentDealId, {$set: {last_sent: new_date}});
     Router.go('dealPage', {_id: this._id});
       return alert("Email Sent");
  }

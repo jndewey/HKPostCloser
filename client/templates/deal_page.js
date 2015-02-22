@@ -14,7 +14,7 @@ tasks: function () {
   },
   dealDate: function () {
     var dateobject = Deals.find(this._id).duedate;
-    return dateobject.duedate.format("{yyyy}-{MM}-{dd}");
+    return dateobject.format("{yyyy}-{MM}-{dd}");
   }
 });
 

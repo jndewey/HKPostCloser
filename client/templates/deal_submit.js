@@ -15,6 +15,8 @@ Template.dealSubmit.events({
       responsible_partner_email: $(e.target).find('[name=responsible_partner_email]').val().toLowerCase(),
       additional_attorney_email: $(e.target).find('[name=additional_attorney_email]').val().toLowerCase(),
       legal_assistant_email: $(e.target).find('[name=legal_assistant_email]').val().toLowerCase(),
+      follow_up_count: 0,
+      last_sent: 0,
       owner: Meteor.userId()
     };
 

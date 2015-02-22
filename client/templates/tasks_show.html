@@ -4,7 +4,7 @@
 			<ul class="list-group">
       			<li class="{{#if checked}}checked{{/if}}">
     			<input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-    			<span class="text">{{title}}      {{task_due_date}}  </span><a href="{{pathFor 'taskeditPage'}}" class="btn btn-primary submit">Edit</a> <button class="btn btn-danger delete">Delete</button><p align=left>Notes: {{task_notes}}</p>
+    			<span class="text">{{title}}      {{task_due_date}}  </span><span class="text"><a href="{{pathFor 'taskeditPage'}}" class="btn btn-primary submit">Edit</a> <button class="btn btn-danger delete">Delete</button><a href="{{pathFor '#'}}" class="btn btn-primary submit">Request Copy</a></span><p align=left>Notes: {{task_notes}}</p>
     			</li>
     		</ul>
    	 	</div>
